@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+shiro.demo.iml
+target/classes/
+target/generated-sources/
+target/maven-archiver/
+target/maven-status/
+target/shiro.demo-0.0.2-SNAPSHOT.war
+target/shiro.demo-0.0.2-SNAPSHOT/

@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.9</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -272,6 +272,12 @@
 			<groupId>net.mingsoft</groupId>
 			<artifactId>shiro-freemarker-tags</artifactId>
 			<version>0.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>shiro-all</artifactId>
+					<groupId>org.apache.shiro</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- freemarker + shiro（标签） begin -->
 		<dependency>
@@ -279,11 +285,11 @@
 			<groupId>org.opensymphony.quartz</groupId>
 			<version>1.6.1</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-all</artifactId>
 			<version>1.2.5</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-core</artifactId>
@@ -309,14 +315,20 @@
 
 		<!-- shiro begin -->
 
-		<!--
-			shiro + ehcache jar <dependency>
+
+		<!--	shiro + ehcache jar -->
+		<dependency>
 			<artifactId>ehcache-core</artifactId>
-			<groupId>net.sf.ehcache</groupId> <version>2.5.0</version>
-			</dependency> <dependency> <groupId>org.apache.shiro</groupId>
-			<artifactId>shiro-ehcache</artifactId> <version>1.2.2</version>
-			</dependency>
-		-->
+			<groupId>net.sf.ehcache</groupId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+
 		<!-- shiro end -->
 
 
