@@ -3,9 +3,9 @@
 
 <configuration>
   
-  <settings>		
+<!--  <settings>
     <setting name="defaultExecutorType" value="REUSE" />
-  </settings>
+  </settings>-->
  
   <typeAliases>
   	

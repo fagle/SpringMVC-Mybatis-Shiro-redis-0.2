@@ -90,8 +90,7 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 			countSql = c.getMappedStatement(countId).getBoundSql(countMap);
 			countCode = countSql.getSql();
 		}
-		try {
-			Connection conn = this.getSqlSession().getConnection();
+		try (Connection conn = this.getSqlSession().getConnection()) {
 
 			List<?> resultList = this.getSqlSession().selectList(sqlId, params);
 			page.setList(resultList);
@@ -137,7 +136,7 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 	 * @param params
 	 * @param pageNo
 	 * @param pageSize
-	 * @param requiredType	返回的类型[可以不传参]
+	 *  requiredType	返回的类型[可以不传参]
 	 * @return
 	 */
 	public List findList(Map<String, Object> params, Integer pageNo,
@@ -156,8 +155,8 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 	 *            参数
 	 * @param pageNo
 	 *            第几页
-	 * @param pageSize每页显示多少条
-	 * @param requiredType	返回的类型[可以不传参]
+	 * @param pageSize 每页显示多少条
+	 *  requiredType	返回的类型[可以不传参]
 	 * @return
 	 */
 	public Pagination findPage(String sqlId, String countId,
@@ -187,8 +186,8 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 			countSql = c.getMappedStatement(countId).getBoundSql(params);
 			countCode = countSql.getSql();
 		}
-		try {
-			Connection conn = this.getSqlSession().getConnection();
+		//自动关闭，否则druid报异常
+		try (Connection conn = this.getSqlSession().getConnection()){
 
 			List resultList = this.getSqlSession().selectList(sqlId, params); 
 
