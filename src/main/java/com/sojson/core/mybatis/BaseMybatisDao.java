@@ -192,10 +192,10 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 		// 这样拿到的竟然是关闭的链接：
 		// getSqlSession().getConnection()
 		SqlSessionTemplate st = (SqlSessionTemplate) getSqlSession();
-		Connection conn = SqlSessionUtils.getSqlSession(
+
+		try (Connection conn = SqlSessionUtils.getSqlSession(
 				st.getSqlSessionFactory(), st.getExecutorType(),
-				st.getPersistenceExceptionTranslator()).getConnection();
-		try {
+				st.getPersistenceExceptionTranslator()).getConnection()) {
 
 			List resultList = this.getSqlSession().selectList(sqlId, params); 
 
