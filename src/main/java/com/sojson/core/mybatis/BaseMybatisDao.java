@@ -14,6 +14,8 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.session.Configuration;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.SqlSessionUtils;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 import com.sojson.common.utils.LoggerUtils;
@@ -186,8 +188,14 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 			countSql = c.getMappedStatement(countId).getBoundSql(params);
 			countCode = countSql.getSql();
 		}
-		//自动关闭，否则druid报异常
-		try (Connection conn = this.getSqlSession().getConnection()){
+
+		// 这样拿到的竟然是关闭的链接：
+		// getSqlSession().getConnection()
+		SqlSessionTemplate st = (SqlSessionTemplate) getSqlSession();
+		Connection conn = SqlSessionUtils.getSqlSession(
+				st.getSqlSessionFactory(), st.getExecutorType(),
+				st.getPersistenceExceptionTranslator()).getConnection();
+		try {
 
 			List resultList = this.getSqlSession().selectList(sqlId, params); 
 
