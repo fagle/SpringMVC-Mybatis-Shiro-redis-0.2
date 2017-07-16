@@ -8,3 +8,4 @@ target/maven-archiver/
 target/maven-status/
 target/shiro.demo-0.0.2-SNAPSHOT.war
 target/shiro.demo-0.0.2-SNAPSHOT/
+target/
