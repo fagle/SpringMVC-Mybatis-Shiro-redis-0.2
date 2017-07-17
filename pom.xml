@@ -77,6 +77,12 @@
 			<version>1.2</version>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<!-- 在idea中直接运行， 需要这个jar包，如果是在maven中打发布包，可以将scope设为provide -->
+			<!--<scope>provided</scope>-->
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.0</version>
