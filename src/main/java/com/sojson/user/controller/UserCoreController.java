@@ -57,7 +57,12 @@ public class UserCoreController extends BaseController {
 		
 		return new ModelAndView("user/index");
 	}
-	
+
+
+	@RequestMapping(value = "/")
+	public String index() {
+		return "user/index";
+	}
 	
 	/**
 	 * 偷懒一下，通用页面跳转
