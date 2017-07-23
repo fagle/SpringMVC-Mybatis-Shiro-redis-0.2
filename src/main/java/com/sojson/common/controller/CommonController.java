@@ -84,6 +84,11 @@ public class CommonController extends BaseController {
 		}
 		return view;
 	}
+
+	@RequestMapping("m")
+	public String movie() {
+		return "movie";
+	}
 	
 	/**
 	 * 获取验证码

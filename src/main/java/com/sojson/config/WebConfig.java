@@ -1,29 +1,20 @@
 package com.sojson.config;
 
 import com.sojson.core.shiro.filter.*;
-import org.apache.shiro.web.filter.AccessControlFilter;
-import org.apache.shiro.web.servlet.AbstractShiroFilter;
-import org.apache.shiro.web.servlet.ShiroFilter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
-import javax.servlet.DispatcherType;
 
 /**
  * Created by fagle on 2017/7/10.
  */
-@SpringBootApplication(scanBasePackages = "com.sojson")
-@EnableWebMvc
-@ImportResource("classpath:spring.xml")
+
+//@EnableWebMvc
+@Configuration
 public class WebConfig extends WebMvcConfigurerAdapter{
 
    /* @Override
@@ -95,7 +86,4 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         return registration;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(WebConfig.class, args);
-}
 }
