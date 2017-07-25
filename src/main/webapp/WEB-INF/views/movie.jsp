@@ -27,7 +27,9 @@
     <script  src="<%=basePath%>/js/shiro.demo.js"></script>
 </head>
 <body>
-<jsp:include page="common/config/top.jsp"></jsp:include>
+<jsp:include page="common/config/top.jsp">
+    <jsp:param name="index" value="4"/>
+</jsp:include>
 <div class="container">
     <h3>看电影咯，123好哟啊好哟</h3>
 </div>

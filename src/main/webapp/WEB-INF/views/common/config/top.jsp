@@ -5,6 +5,7 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+    String index=String.valueOf(request.getParameter("index"));
 %>
 <script baseUrl="<%=basePath%>" src="<%=basePath%>/js/user.login.js"></script>
 <div class="navbar navbar-inverse navbar-fixed-top animated fadeInDown" style="z-index: 101;">
@@ -53,7 +54,7 @@
                 </shiro:hasAnyRoles>
                 <%--拥有 active888888（管理员） ||  100003（权限频道）--%>
                 <shiro:hasAnyRoles name='888888,100003'>
-                    <li class="dropdown active">
+                    <li class="dropdown  <%=index.equals("3")?"active":""%>">
                         <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown"
                            data-hover="dropdown" class="dropdown-toggle" href="/permission/index.shtml">
                             权限管理<span class="caret"></span>
@@ -74,8 +75,8 @@
                         </ul>
                     </li>
                 </shiro:hasAnyRoles>
-                <li>
-                    <a class="dropdown-toggle" href="/open/m">
+                <li class="dropdown  <%=index.equals("4")?"active":""%>">
+                    <a class="dropdown-toggle <%=index.equals("4")?"active":""%>" href="/open/m">
                         电影<span class="collapsing"></span>
                     </a>
                 </li>
@@ -113,9 +114,6 @@
                     </shiro:guest>
                 </li>
             </ul>
-            <style>#topMenu > li > a {
-                padding: 10px 13px
-            }</style>
         </div>
     </div>
     <script src="/js/bootstrap-hover-dropdown.min.js"></script>

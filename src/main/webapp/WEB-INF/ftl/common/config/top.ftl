@@ -103,9 +103,6 @@
                     </@shiro.guest>
                 </li>
             </ul>
-            <style>#topMenu > li > a {
-                padding: 10px 13px
-            }</style>
         </div>
     </div>
     <script src="/js/bootstrap-hover-dropdown.min.js"></script>
