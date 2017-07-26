@@ -1,37 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Fagle
-  Date: 2017/7/22 0022
-  Time: 下午 7:25
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--shiro 标签 --%>
-<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
-%>
+<!DOCTYPE html>
 <html>
 <head>
-    <base href="<%=basePath%>"/>
-    <title>movie list</title>
-
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-    <link rel="shortcut icon" href="<%=basePath%>/favicon.ico"/>
-    <link href="<%=basePath%>/js/common/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="<%=basePath%>/css/common/base.css" rel="stylesheet"/>
-    <script src="<%=basePath%>/js/common/jquery/jquery1.8.3.min.js"></script>
-    <script src="<%=basePath%>/js/common/layer/layer.js"></script>
-    <script src="<%=basePath%>/js/common/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="<%=basePath%>/js/shiro.demo.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title>超炫酷的HTML5视频播放器DEMO演示</title>
+    <link rel="stylesheet" type="text/css" href="css/media-player/reset.css"/>
+    <link rel="stylesheet" href="/js/common/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/media-player/willesPlay.css"/>
+    <script src="js/common/jquery/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<jsp:include page="common/config/top.jsp">
-    <jsp:param name="index" value="4"/>
-</jsp:include>
 <div class="container">
-    <h3>看电影咯，123好哟啊好哟</h3>
     <div class="row">
         <div class="col-md-12">
             <div id="willesPlay">
@@ -48,7 +28,7 @@
                         </ul>
                     </div>
                     <video width="100%" height="100%" id="playVideo">
-                        <source src="http://115.231.144.59/10/z/f/m/e/zfmeprwqhiydtbklvlaodpidksxlsz/hc.yinyuetai.com/8408014F06AA7ED9E43BC2E617F24B8E.flv?sc=80b3a67012591c91&br=780&vid=782863&aid=1559&area=KR&vst=0&ptp=mv&rd=yinyuetai.com"
+                        <source src="http://220.167.105.121/170/2/11/acloud/151672/letv.v.yinyuetai.com/he.yinyuetai.com/uploads/videos/common/6609014F06AE1C8E99DE142502A2B157.flv?crypt=95aa7f2e98550&b=1314&nlh=3072&nlt=45&bf=6000&p2p=1&video_type=flv&termid=0&tss=no&geo=CN-23-323-1&platid=0&splatid=0&its=0&qos=5&fcheck=0&proxy=3062324601,2101603530,3683272595&uid=3063271287.rp&keyitem=GOw_33YJAAbXYE-cnQwpfLlv_b2zAkYctFVqe5bsXQpaGNn3T1-vhw..&ntm=1447949400&nkey=55c24f4c47dd315085c383e07750f67e&nkey2=3344c026a5c147651522c75bc51fb700&sc=0e90a16b75f7bc55&br=3136&vid=782863&aid=1559&area=KR&vst=0&ptp=mv&rd=yinyuetai.com?sc=0e90a16b75f7bc55&errc=0&gn=1065&buss=106551&cips=182.149.207.119&lersrc=MTI1Ljg5Ljc0LjE3MQ==&tag=yinyuetai&cuhost=letv.v.yinyuetai.com&cuid=151672&flw3x=0&sign=coopdown&fext=.flv&br=3136&ptp=mv&rd=yinyuetai.com"
                                 type="video/mp4"></source>
                         当前浏览器不支持 video直接播放，点击这里下载视频： <a href="/">下载视频</a>
                     </video>
@@ -87,11 +67,5 @@
     <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
     <script src="/follow.js" type="text/javascript"></script>
 </div>
-
 </body>
-<link rel="stylesheet" type="text/css" href="css/media-player/reset.css"/>
-<link rel="stylesheet" href="/js/common/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/media-player/willesPlay.css"/>
-<script src="js/common/jquery/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
 </html>
