@@ -83,15 +83,11 @@
     </div>
 </div>
 
-<div style="text-align:center;clear:both;">
-    <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-    <script src="/follow.js" type="text/javascript"></script>
-</div>
 
 </body>
-<link rel="stylesheet" type="text/css" href="css/media-player/reset.css"/>
-<link rel="stylesheet" href="/js/common/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/media-player/willesPlay.css"/>
-<script src="js/common/jquery/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="<%=basePath%>css/media-player/reset.css"/>
+<link rel="stylesheet" href="<%=basePath%>/js/common/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%=basePath%>/css/media-player/willesPlay.css"/>
+<script src="<%=basePath%>/js/common/jquery/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=basePath%>/js/willesPlay.js" type="text/javascript" charset="utf-8"></script>
 </html>
