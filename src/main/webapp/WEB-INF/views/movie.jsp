@@ -31,7 +31,7 @@
     <jsp:param name="index" value="4"/>
 </jsp:include>
 <div class="container">
-    <h3>看电影咯，123好哟啊好哟</h3>
+    <%--<h3>看电影咯，123好哟啊好哟</h3>--%>
     <div class="row">
         <div class="col-md-12">
             <div id="willesPlay">
